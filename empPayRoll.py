@@ -135,12 +135,13 @@ printOutPut(emp5InfoList)
 print('\n')
 
 #DRY code
-#allEmpList = []
-#empInfoList = []
-#print('View all the employee Payroll information:')
-#print('***********************************************************************************************************************\n')
-#print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
-#print('***********************************************************************************************************************\n')
+allEmpList = []
+empInfoList = []
+print('View all the employee Payroll information:')
+print('***********************************************************************************************************************\n')
+print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
+print('***********************************************************************************************************************\n')
+
 #for i in range(len(allEmpList)):
     #for j in range(len(empInfoList)):
         #inputData(empInfoList[j])
