@@ -10,4 +10,4 @@ The program is written in Python.
 
 ![outputdemo](./Assets/Images/scenario12.png)
 
-#View of output for several employee.
+#View of output for several employees.
