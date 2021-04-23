@@ -14,16 +14,15 @@ stateTaxRate = 0.03
 ficaTaxRate = 0.07
 overTimeRate = 1.5
 
-#initialize employee lists
+#initialize employee lists to store employee data
+#empInfoList = []
+emp1InfoList= []
+emp2InfoList=[]
+emp3InfoList=[]
+emp4InfoList=[]
+emp5InfoList=[]
 
-#Intro
-
-print('************************************************\n')
-print("Welcome to ACMEPayroll")
-print("You are using ACME Corporation Payroll Program \n")
-print('************************************************\n')
-
-
+# Define various functions 
 #Input information
 def inputData(x):
     empName = str(input("Enter Employee Name: ")) #trim??
@@ -36,7 +35,7 @@ def inputData(x):
     return x
 
 #function grossPay calculates the employee grosspay for a given employee
-# grosspay = (hourly rate x hours worked ) + (Overtime h. x 1.5 X hourly rate)
+# grosspay = (hourly rate x hours worked ) + (Overtime h. x overtimerate X hourly rate)
 def grossPay(x):
     #Calculate Overtime hours 
     overTimeHours = x[1] - 40
@@ -76,10 +75,13 @@ def printOutPut(x):
     return 
 
 #Main 
+#Header Info
+print('************************************************\n')
+print("Welcome to ACMEPayroll")
+print("You are using ACME Corporation Payroll Program \n")
+print('************************************************\n')
 
-######oneEMployee
-# Initialise employee list
-#empInfoList = []
+###### display oneEMployee info
 #inputData(empInfoList)
 #grossPay(empInfoList)
 #print(empInfoList)
@@ -91,14 +93,6 @@ def printOutPut(x):
 #print('\n')
 
 ######several employees
-
-emp1InfoList= []
-emp2InfoList=[]
-emp3InfoList=[]
-emp4InfoList=[]
-emp5InfoList=[]
-
-
 inputData(emp1InfoList)
 grossPay(emp1InfoList)
 totalD = deductions(emp1InfoList)
