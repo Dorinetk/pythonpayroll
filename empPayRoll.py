@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-#####
 #ACME Corporation needs a simple payroll program written in Python.
 #The Input: Employee Name, Hours worked, Pay Rate (hourly)
 #Employees are to receive 1.5x pay rate for hours over 40
 #Fed Tax = 10%, State tax = 3%,FICA rate = 7%
 #Output: Name Hours Rate Grosspay Fed Tax State Tax FICA Netpay
-#** Bonus: Bonus points if program can process multiple employees inputs before program ends
+#** Bonus:  Can the program process multiple employees inputs before program ends?
 
 
 #Fed Tax = 10%, State tax = 3%,FICA rate = 7%, Overtime = 1.5xpay rate
