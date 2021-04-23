@@ -5,7 +5,7 @@
 #Employees are to receive 1.5x pay rate for hours over 40
 #Fed Tax = 10%, State tax = 3%,FICA rate = 7%
 #Output: Name Hours Rate Grosspay Fed Tax State Tax FICA Netpay
-#** Bonus: Bonus points if program can process 5 employees inputs before program ends
+#** Bonus: Bonus points if program can process multiple employees inputs before program ends
 
 
 #Fed Tax = 10%, State tax = 3%,FICA rate = 7%, Overtime = 1.5xpay rate
@@ -19,8 +19,8 @@ overTimeRate = 1.5
 emp1InfoList= []
 emp2InfoList=[]
 emp3InfoList=[]
-emp4InfoList=[]
-emp5InfoList=[]
+allEmpList = []
+empInfoList = []
 
 # Define various functions 
 #Input information
@@ -92,7 +92,7 @@ print('************************************************\n')
 #printOutPut(empInfoList)
 #print('\n')
 
-######several employees
+######several employees - (2)
 inputData(emp1InfoList)
 grossPay(emp1InfoList)
 totalD = deductions(emp1InfoList)
@@ -111,18 +111,8 @@ totalD = deductions(emp3InfoList)
 emp3InfoList.append(round(netPay(emp3InfoList[3],totalD)))
 print('\n')
 
-inputData(emp4InfoList)
-grossPay(emp4InfoList)
-totalD = deductions(emp4InfoList)
-emp4InfoList.append(round(netPay(emp4InfoList[3],totalD)))
-print('\n')
 
-inputData(emp5InfoList)
-grossPay(emp5InfoList)
-totalD = deductions(emp5InfoList)
-emp5InfoList.append(round(netPay(emp5InfoList[3],totalD)))
-print('\n')
-print('View all the employee Payroll information:')
+print('View all the employee(s) Payroll information:')
 print('***********************************************************************************************************************\n')
 print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
 print('***********************************************************************************************************************\n')
@@ -133,19 +123,8 @@ printOutPut(emp2InfoList)
 print("\n")
 printOutPut(emp3InfoList)
 print("\n")
-printOutPut(emp4InfoList)
-print("\n")
-printOutPut(emp5InfoList)
-print('\n')
 
 #DRY code
-allEmpList = []
-empInfoList = []
-print('View all the employee Payroll information:')
-print('***********************************************************************************************************************\n')
-print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
-print('***********************************************************************************************************************\n')
-
 #for i in range(len(allEmpList)):
     #for j in range(len(empInfoList)):
         #inputData(empInfoList[j])
