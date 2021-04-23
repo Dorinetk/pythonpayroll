@@ -7,7 +7,17 @@
 #Output: Name Hours Rate Grosspay Fed Tax State Tax FICA Netpay
 #** Bonus: Bonus points if program can process 5 employees inputs before program ends
 
+
+#Fed Tax = 10%, State tax = 3%,FICA rate = 7%, Overtime = 1.5xpay rate
+fedTaxRate = 0.1
+stateTaxRate = 0.03
+ficaTaxRate = 0.07
+overTimeRate = 1.5
+
+#initialize employee lists
+
 #Intro
+
 print('************************************************\n')
 print("Welcome to ACMEPayroll")
 print("You are using ACME Corporation Payroll Program \n")
@@ -17,8 +27,8 @@ print('************************************************\n')
 #Input information
 def inputData(x):
     empName = str(input("Enter Employee Name: ")) #trim??
-    hoursWorked = int(input("Enter the numbers of hours worked (Round up to the next digit): "))
-    payRate = int(input("Enter the hourly pay rate : $"))
+    hoursWorked = int(input("Enter the numbers of hours worked: "))
+    payRate = int(input("Enter the hourly pay rate: $"))
     # store employee info in empList
     x.insert(0,empName)
     x.insert(1,hoursWorked)
@@ -33,7 +43,7 @@ def grossPay(x):
 
     #calculate GrossPay
     if x[1] > 40:
-        grossP = ((x[2] * (x[1] - overTimeHours)) + (x[2] * overTimeHours * 1.5))
+        grossP = ((x[2] * (x[1] - overTimeHours)) + (x[2] * overTimeHours * overTimeRate))
     else:
         grossP = x[2] * x[1]
 
@@ -43,10 +53,10 @@ def grossPay(x):
 
 #function empDeductions calculates all deductions
 def deductions(x):
-    #Fed Tax = 10%, State tax = 3%,FICA rate = 7%
-    empFedTax = (x[3]*10)/100
-    empStateTax =  (x[3]*3)/100
-    empFICA= (x[3]*7)/100
+    
+    empFedTax = x[3]*fedTaxRate
+    empStateTax =  x[3]*stateTaxRate
+    empFICA= x[3]*ficaTaxRate
     x.insert(4,round(empFedTax))
     x.insert(5,round(empStateTax))
     x.insert(6,round(empFICA))
