@@ -20,8 +20,7 @@ emp2InfoList=[]
 emp3InfoList=[]
 #initialise employee list dictionary
 allEmpList = []
-#intitaliste a dictionary for one employee info
-empInfoList = []
+
 # Define various functions 
 #Input information
 def inputData(x):
@@ -125,22 +124,22 @@ printOutPut(emp3InfoList)
 print("\n")
  
 #DRY code
-#print(type(emp3InfoList), len(emp3InfoList))
-
 empNum = int(input("How many employees do you want to display? :  "))
 print(empNum)
 
 #there are 8 data entries for each employee list
-
 #input data for each employee
+
 for j in range(empNum):
-    inputData(empInfoList)
-    grossPay(empInfoList)
-    totalD = deductions(empInfoList)
+    empInfoList=[] #re-intialises a new list for each employee
+    inputData(empInfoList) #collect initial data
+    grossPay(empInfoList) #caculate grosspay
+    totalD = deductions(empInfoList) #calculate deductions
     empInfoList.append(round(netPay(empInfoList[3],totalD)))
     print(empInfoList)
-    allEmpList.insert(j,empInfoList) #saves employee info in main list    
 
+    allEmpList.insert(j,empInfoList) #saves employee info in main list at index j   
+    print(allEmpList)
 #output information 
 print(allEmpList)
 #for j in range(empNum):
