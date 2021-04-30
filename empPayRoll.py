@@ -127,9 +127,8 @@ print("\n")
 empNum = int(input("How many employees do you want to display? :  "))
 print(empNum)
 
-#there are 8 data entries for each employee list
-#input data for each employee
 
+#input data for each employee and
 for j in range(empNum):
     empInfoList=[] #re-intialises a new list for each employee
     inputData(empInfoList) #collect initial data
@@ -137,12 +136,15 @@ for j in range(empNum):
     totalD = deductions(empInfoList) #calculate deductions
     empInfoList.append(round(netPay(empInfoList[3],totalD)))
     print(empInfoList)
-
     allEmpList.insert(j,empInfoList) #saves employee info in main list at index j   
     print(allEmpList)
-#output information 
+#output information
 print(allEmpList)
-#for j in range(empNum):
-    #printOutPut(allEmpList[j])
-    #print('\n')
+print('View all the employee(s) Payroll information:')
+print('***********************************************************************************************************************\n')
+print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
+print('***********************************************************************************************************************\n')
+for j in range(empNum):
+    printOutPut(allEmpList[j])
+    print('\n')
 
