@@ -18,9 +18,10 @@ overTimeRate = 1.5
 emp1InfoList= []
 emp2InfoList=[]
 emp3InfoList=[]
+#initialise employee list dictionary
 allEmpList = []
+#intitaliste a dictionary for one employee info
 empInfoList = []
-
 # Define various functions 
 #Input information
 def inputData(x):
@@ -122,15 +123,25 @@ printOutPut(emp2InfoList)
 print("\n")
 printOutPut(emp3InfoList)
 print("\n")
-
+ 
 #DRY code
-#for i in range(len(allEmpList)):
-    #for j in range(len(empInfoList)):
-        #inputData(empInfoList[j])
+print(type(emp3InfoList), len(emp3InfoList))
+
+empNum = int(input("How many employees do you want to display? :  "))
+print(empNum)
+
+#there are 8 data entries for each employee list
+
+#input data for each employee
+for j in range(empNum):
+    inputData(empInfoList)
+    print(empInfoList)
+    allEmpList.insert(j,empInfoList) #saves employee info in main list
+    
         #grossPay(empInfoList[j])
         #totalD = deductions(empInfoList[j])
         #empInfoList[j].append(round(netPay(empInfoList[j][3],totalD)))
         #printOutPut(empInfoList[j])
-    #print('\n')
-    #allEmpList[i] = empInfoList
+print('\n')
+print(allEmpList)
 
