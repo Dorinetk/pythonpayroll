@@ -125,7 +125,7 @@ printOutPut(emp3InfoList)
 print("\n")
  
 #DRY code
-print(type(emp3InfoList), len(emp3InfoList))
+#print(type(emp3InfoList), len(emp3InfoList))
 
 empNum = int(input("How many employees do you want to display? :  "))
 print(empNum)
@@ -135,13 +135,15 @@ print(empNum)
 #input data for each employee
 for j in range(empNum):
     inputData(empInfoList)
+    grossPay(empInfoList)
+    totalD = deductions(empInfoList)
+    empInfoList.append(round(netPay(empInfoList[3],totalD)))
     print(empInfoList)
-    allEmpList.insert(j,empInfoList) #saves employee info in main list
-    
-        #grossPay(empInfoList[j])
-        #totalD = deductions(empInfoList[j])
-        #empInfoList[j].append(round(netPay(empInfoList[j][3],totalD)))
-        #printOutPut(empInfoList[j])
-print('\n')
+    allEmpList.insert(j,empInfoList) #saves employee info in main list    
+
+#output information 
 print(allEmpList)
+#for j in range(empNum):
+    #printOutPut(allEmpList[j])
+    #print('\n')
 
