@@ -8,6 +8,6 @@ The program is written in Python.
 
 #View of output 
 
-![outputdemo](./Assets/viewpayrollpy.png)
+![outputdemo](./Assets/images/viewpayrollpy.png)
 
 
