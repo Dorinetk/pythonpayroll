@@ -6,8 +6,8 @@ In addition, the program with require a number of employees and generate their d
 
 The program is written in Python.
 
-#View of output for one employee
+#View of output 
 
 ![outputdemo](./viewpayrollpy.png)
 
-#View of output for several employees.
+
