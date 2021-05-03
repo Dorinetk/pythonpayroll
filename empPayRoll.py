@@ -80,7 +80,7 @@ print("Welcome to ACMEPayroll")
 print("You are using ACME Corporation Payroll Program \n")
 print('************************************************\n')
 
-###### display oneEMployee info
+# display oneEMployee info
 #inputData(empInfoList)
 #grossPay(empInfoList)
 #print(empInfoList)
@@ -91,42 +91,14 @@ print('************************************************\n')
 #printOutPut(empInfoList)
 #print('\n')
 
-######several employees - (2)
-inputData(emp1InfoList)
-grossPay(emp1InfoList)
-totalD = deductions(emp1InfoList)
-emp1InfoList.append(round(netPay(emp1InfoList[3],totalD)))
-print('\n')
+#several employees 
+#option1: if the number of employees is known, call the steps above  
+#for emp1InfoList, emp2InfoList... and group the printOutPut calls
 
-inputData(emp2InfoList)
-grossPay(emp2InfoList)
-totalD = deductions(emp2InfoList)
-emp2InfoList.append(round(netPay(emp2InfoList[3],totalD)))
-print('\n')
-
-inputData(emp3InfoList)
-grossPay(emp3InfoList)
-totalD = deductions(emp3InfoList)
-emp3InfoList.append(round(netPay(emp3InfoList[3],totalD)))
-print('\n')
-
-
-print('View all the employee(s) Payroll information:')
-print('***********************************************************************************************************************\n')
-print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
-print('***********************************************************************************************************************\n')
-
-printOutPut(emp1InfoList)
-print("\n")
-printOutPut(emp2InfoList)
-print("\n")
-printOutPut(emp3InfoList)
-print("\n")
- 
-#DRY code
+#Option2: request number of employee as input and display payroll information 
 empNum = int(input("How many employees do you want to display? :  "))
-print(empNum)
-
+#print(empNum)
+print("\n")
 
 #input data for each employee and
 for j in range(empNum):
@@ -135,12 +107,15 @@ for j in range(empNum):
     grossPay(empInfoList) #caculate grosspay
     totalD = deductions(empInfoList) #calculate deductions
     empInfoList.append(round(netPay(empInfoList[3],totalD)))
-    print(empInfoList)
+    #print(empInfoList)
     allEmpList.insert(j,empInfoList) #saves employee info in main list at index j   
-    print(allEmpList)
+    #print(allEmpList)
+    print("\n")
+
 #output information
 print(allEmpList)
 print('View all the employee(s) Payroll information:')
+print("\n")
 print('***********************************************************************************************************************\n')
 print("Name\tHours Worked\tpayRate($)\tgrossPay($)\tFed. Tax($)\tState Tax($)\tFICA($)\t\tNet Salary($)")
 print('***********************************************************************************************************************\n')
