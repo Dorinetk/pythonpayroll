@@ -113,7 +113,7 @@ for j in range(empNum):
     print("\n")
 
 #output information
-print(allEmpList)
+#print(allEmpList)
 print('View all the employee(s) Payroll information:')
 print("\n")
 print('***********************************************************************************************************************\n')
