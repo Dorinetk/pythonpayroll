@@ -8,6 +8,6 @@ The program is written in Python.
 
 #View of output for one employee
 
-![outputdemo](./Assets/Images/scenario12.png)
+![outputdemo](./viewpayrollpy.png)
 
 #View of output for several employees.
