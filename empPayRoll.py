@@ -74,7 +74,7 @@ def netPay(x, y):
 
 def printOutPut(x):
     for i in range(len(x)):
-        print(str(x[i]) + "\t\t", end='')
+        print(str(x[i]) + "\t\t", end=' ')
     return
 
 

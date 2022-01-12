@@ -10,4 +10,7 @@ The program is written in Python.
 
 ![outputdemo](./Assets/images/viewpayrollpy.png)
 
+## Run this code on the terminal with Python3
+
+
 
